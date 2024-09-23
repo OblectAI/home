@@ -60,15 +60,13 @@ header h4{
 
 body{
 background: black;
-background-color: lightblue;
+background-color: black;
 transition: background-color 2s ease;
 }
- <script>
-    window.onload = function() {
-      setTimeout(function() {
-        document.querySelector('.background').style.backgroundColor = 'tomato';
-      }, 3000); // Change color after 3 seconds
-    }
-  </script>
 
+.custom-cursor{
+    Cursor: url(iconmonstr-shape-20 (1).svg), auto;
+}
+
+  
   
