@@ -10,19 +10,19 @@
         .background {
           width: 100%;
           height: 100vh;
-          animation: changeColor 4.3s ease-in-out ;
+          background: conic-gradient(from 0deg, violet, indigo, blue, green, yellow, orange, red, violet);
+          animation: swirl 10s linear infinite; /* Swirling animation */
         }
-    
-        @keyframes changeColor {
+
+        @keyframes swirl {
           0% {
-            background-color: rgb(35, 0, 92);
+            transform: rotate(0deg);
           }
-          50% {
-            background-color: rgb(35, 0, 92);
+          100% {
+            transform: rotate(360deg); /* Full 360-degree rotation */
           }
-          
         }
-      </style>
+    </style>
 </head>
 <body>
     
