@@ -7,33 +7,76 @@
     
     <style>
         /* Full-screen static rainbow swirl */
-        .background {
-          width: 100%;
-          height: 100vh;
-          background: radial-gradient(circle at left center, 
-              violet, indigo, blue, green, yellow, orange, red, violet);
-          background-size: 300% 300%;
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-          background-repeat: no-repeat;
-          transform: skew(20deg, -20deg);
-        }
-
-        /* Body to remove margin and full page effect */
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
             overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             background-color: black;
+        }
+
+        .background {
+          width: 100%;
+          height: 100vh;
+          position: relative;
+        }
+
+        /* Create curved layers with a combination of background and masking */
+        .layer {
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            background: conic-gradient(from 90deg, violet, indigo, blue, green, yellow, orange, red, violet);
+            border-radius: 50%;
+            transform-origin: center;
+        }
+
+        /* Individual layers for multi-layer swirl effect */
+        .layer:nth-child(1) {
+            top: -40%;
+            left: -40%;
+            transform: rotate(-15deg) scale(1.2);
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        }
+
+        .layer:nth-child(2) {
+            top: -30%;
+            left: -30%;
+            transform: rotate(-35deg) scale(1.1);
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        }
+
+        .layer:nth-child(3) {
+            top: -20%;
+            left: -20%;
+            transform: rotate(-55deg) scale(1.0);
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        }
+
+        .layer:nth-child(4) {
+            top: -10%;
+            left: -10%;
+            transform: rotate(-75deg) scale(0.9);
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        }
+
+        .layer:nth-child(5) {
+            top: 0;
+            left: 0;
+            transform: rotate(-95deg) scale(0.8);
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
         }
     </style>
 </head>
 <body>
     <!-- Background with rainbow swirl effect -->
-    <div class="background"></div>
+    <div class="background">
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+    </div>
 </body>
 </html>
