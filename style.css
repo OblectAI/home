@@ -1,37 +1,40 @@
- {
+{
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
-  }
+}
 
-header{
+header {
     position: relative;
     left: 0;
     top: 0;
-    width: 1005;
+    width: 1005px;
     height: 80px;
 }
 
-header h4{
+header h4 {
     position: absolute;
     left: 10%;
     bottom: 1rem;
     font-size: 1.6rem;
 }
 
-.intro{
-    position:fixed;
+.intro {
+    position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100vh;
-background: radial-gradient(to bottom right, rgb(78, 51, 196), rgb(0, 0, 0) 100%);
+    /* Radial gradient with black edges transitioning to a rainbow swirl in the center */
+    background: radial-gradient(circle at center, black 40%, transparent 70%),
+                conic-gradient(from 180deg, violet, indigo, blue, green, yellow, orange, red, violet);
+    background-blend-mode: screen;
     transition: 1s;
 }
 
-.logo-header{
+.logo-header {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -39,40 +42,31 @@ background: radial-gradient(to bottom right, rgb(78, 51, 196), rgb(0, 0, 0) 100%
     color: white;
 }
 
-.logo{
+.logo {
     position: relative;
     display: inline-block;
     bottom: -20px;
     opacity: 0;
 }
 
-.logo.active{
+.logo.active {
     bottom: 0;
     opacity: 1;
     transition: ease-in-out 0.5s;
 }
 
-.logo.fade{
+.logo.fade {
     bottom: 150px;
     opacity: 0;
     transition: ease-in-out 0.5s;
 }
 
-body{
-background: black;
-background-color: black;
-transition: background-color 2s ease;
+body {
+    background: black;
+    background-color: black;
+    transition: background-color 2s ease;
 }
 
-.custom-cursor{
+.custom-cursor {
     Cursor: url(iconmonstr-shape-20 (1).svg), auto;
 }
-
- 
- 
-
-
-
-
-
-
