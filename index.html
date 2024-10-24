@@ -10,7 +10,7 @@
         .background {
           width: 100%;
           height: 100vh;
-          animation: changeColor 4.3s ease-in-out;
+          animation: changeColor 4.3s ease-in-out ;
         }
    
         @keyframes changeColor {
@@ -20,46 +20,23 @@
           50% {
             background-color: rgb(35, 0, 92);
           }
+         
         }
-
-        /* Button Styling */
-        .fade-buttons {
-            opacity: 0;
-            transition: opacity 2s ease-in;
-        }
-        
-        /* Show buttons after fade in */
-        .visible {
-            opacity: 1;
-        }
-    </style>
+      </style>
 </head>
 <body>
    
     <div class="background"></div>
-    <div class="intro">
-        <h1 class="logo-header">
-            <span class="logo">Oblect</span><span class="logo">.</span><span class="logo">AI</span>
-        </h1>
-    </div>
+<div class="intro">
+    <h1 class="logo-header">
+        <span class="logo">Oblect</span><span class="logo">.</span><span class="logo">AI</span>
+    </h1>
+</div>
 
     <header>
         <h4>Oblect.AI</h4>
     </header>
-
-    <!-- Buttons that will fade in after 5 seconds -->
-    <div id="buttons-container" class="fade-buttons">
-        <button>Button 1</button>
-        <button>Button 2</button>
-        <button>Button 3</button>
-    </div>
-
-    <script>
-        // Wait 5 seconds then show the buttons with fade-in effect
-        setTimeout(function() {
-            document.getElementById('buttons-container').classList.add('visible');
-        }, 5000); // 5000ms = 5 seconds
-    </script>
-
+   
+    <script src="app.js"></script>
 </body>
 </html>
