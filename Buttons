@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story</title>
+    <style>
+        /* Full page styling */
+        body {
+            background-color: black; /* Black background */
+            color: white; /* White text */
+            font-family: "Inter", sans-serif; /* Font family */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        /* Container to limit text width */
+        .content-container {
+            max-width: 600px; /* Limit text to the center */
+            width: 100%;
+        }
+
+        /* Back button styling */
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: black;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <!-- Text area where you can type your story -->
+        <h1>Our Story</h1>
+        <p>
+            <!-- Type your story here -->
+            <!-- Example text: -->
+            <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id nisi vel metus gravida interdum. -->
+        </p>
+
+        <!-- Back button to return to the previous page -->
+        <button class="back-button" onclick="history.back()">Back</button>
+    </div>
+</body>
+</html>
