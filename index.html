@@ -7,16 +7,23 @@
     <link rel="stylesheet" href="style.css">
    
     <style>
-        /* Background initial dark purple */
+        /* Initial Background Setup */
         .background {
             width: 100%;
             height: 100vh;
             background: #4e33c4; /* Initial dark purple */
-            transition: background 1s;
+            transition: background 3s ease; /* Smooth transitions */
             position: fixed;
             top: 0;
             left: 0;
             z-index: -1;
+        }
+
+        /* Rainbow Swirl Gradient */
+        .rainbow {
+            background: radial-gradient(circle at center, black 40%, transparent 70%),
+                        conic-gradient(from 180deg, violet, indigo, blue, green, yellow, orange, red, violet);
+            background-blend-mode: screen;
         }
 
         /* Intro section with logo animation */
@@ -86,17 +93,6 @@
             color: #444;
         }
 
-        /* Fade and color animations */
-        @keyframes rainbowCycle {
-            0% { background: radial-gradient(circle at center, black 40%, transparent 70%), conic-gradient(from 180deg, violet, indigo, blue, green, yellow, orange, red, violet); }
-            50% { background: black; }
-            100% { background: var(--randomColor, violet); }
-        }
-
-        .background.animate {
-            animation: rainbowCycle 15s infinite;
-        }
-
         body {
             margin: 0;
             background: black;
@@ -105,7 +101,7 @@
     </style>
 </head>
 <body>
-    <!-- Background with initial color (purple) -->
+    <!-- Background with initial color (dark purple) -->
     <div class="background"></div>
 
     <!-- Intro section with logo animation -->
@@ -125,20 +121,48 @@
     </div>
     
     <script>
-        let intro = document.querySelector('.intro');
-        let logo = document.querySelector('.logo-header');
-        let logoSpan = document.querySelectorAll('.logo');
-        let buttonContainer = document.querySelector('.button-container');
-        let background = document.querySelector('.background');
+        const intro = document.querySelector('.intro');
+        const logo = document.querySelector('.logo-header');
+        const logoSpan = document.querySelectorAll('.logo');
+        const buttonContainer = document.querySelector('.button-container');
+        const background = document.querySelector('.background');
 
-        // Random rainbow color selection
+        // Array of rainbow colors for random selection
+        const rainbowColors = ["violet", "indigo", "blue", "green", "yellow", "orange", "red"];
+
+        // Random color selection
         function getRandomRainbowColor() {
-            const colors = ["violet", "indigo", "blue", "green", "yellow", "orange", "red"];
-            return colors[Math.floor(Math.random() * colors.length)];
+            return rainbowColors[Math.floor(Math.random() * rainbowColors.length)];
+        }
+
+        // Function to cycle through background states
+        function cycleBackground() {
+            setTimeout(() => {
+                background.classList.add('rainbow'); // Show rainbow
+                background.style.transition = "background 3s ease";
+            }, 1000);
+
+            setTimeout(() => {
+                background.classList.remove('rainbow');
+                background.style.background = 'black'; // Fade to black
+            }, 10000);
+
+            setTimeout(() => {
+                background.style.background = getRandomRainbowColor(); // Random color
+            }, 13000);
+
+            setTimeout(() => {
+                background.style.background = 'black'; // Fade to black again
+            }, 16000);
+
+            setTimeout(() => {
+                background.classList.add('rainbow'); // Back to rainbow swirl
+            }, 19000);
         }
 
         window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
+                // Logo animation
                 logoSpan.forEach((span, idx) => {
                     setTimeout(() => {
                         span.classList.add('active');
@@ -155,16 +179,15 @@
                 }, 2000);
 
                 setTimeout(() => {
+                    // Hide intro and show buttons
                     intro.style.top = '-100vh';
-                    buttonContainer.style.display = 'flex'; // Show buttons after intro
+                    buttonContainer.style.display = 'flex';
 
-                    // Start background animation
-                    background.classList.add('animate');
+                    // Start the background cycle after intro finishes
+                    cycleBackground();
 
-                    // Update random color every cycle
-                    setInterval(() => {
-                        background.style.setProperty('--randomColor', getRandomRainbowColor());
-                    }, 15000); // Every 15s to match animation duration
+                    // Loop the cycle every 19 seconds
+                    setInterval(cycleBackground, 19000);
                 }, 2300);
             });
         });
