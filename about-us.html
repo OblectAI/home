@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1000px;
+            margin: auto;
+            padding-top: 20px;
+        }
+        .text-block {
+            width: 45%;
+        }
+        .image-container {
+            width: 150px;
+            height: 150px;
+            background-color: gray; /* Placeholder color for image */
+            margin: auto;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: black;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="text-block">
+            <p>
+                <!-- Type the left side text here -->
+            </p>
+        </div>
+        <div class="image-container">
+            <!-- Placeholder for center image -->
+        </div>
+        <div class="text-block">
+            <p>
+                <!-- Type the right side text here -->
+            </p>
+        </div>
+    </div>
+    <button class="back-button" onclick="history.back()">Back</button>
+</body>
+</html>
