@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: "Inter", sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .contact-item {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .contact-item img {
+            width: 100px;
+            height: 100px;
+            background-color: gray; /* Placeholder color for image */
+            border-radius: 50%;
+        }
+        .contact-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: black;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: black;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-item">
+        <img src="#" alt="Liam's picture" />
+        <a href="mailto:28lkelly@fmschools.org" class="contact-button">Liam</a>
+    </div>
+    <div class="contact-item">
+        <img src="#" alt="Luca's picture" />
+        <a href="mailto:lucavassallo1219@gmail.com" class="contact-button">Luca</a>
+    </div>
+    <button class="back-button" onclick="history.back()">Back</button>
+</body>
+</html>
