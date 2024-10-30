@@ -14,6 +14,11 @@
             box-sizing: border-box;
             overflow-y: auto;
         }
+        .name-heading {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
         .content {
             display: flex;
             justify-content: space-between;
@@ -50,9 +55,15 @@
     <!-- Logo image in the top left corner -->
     <img src="logo.png" alt="Logo" style="position: fixed; top: 10px; left: 10px; width: 50px; height: auto;">
 
+    <!-- Large text for Liam Kelly -->
+    <h1 class="name-heading" style="position: fixed; top: 100px; left: 250px;">Liam Kelly</h1>
+    <!-- Image of Liam -->
     <img src="IMG_0700 (1).png" alt="Liam" style="position: fixed; top: 150px; left: 250px; width: 300px; height: 400px;">
 
-    <img src="luca.png" alt="Luca" style="position: fixed; top: 150px; right: 250px; width: 300px; height: 400px;>
+    <!-- Large text for Luca Vassallo -->
+    <h1 class="name-heading" style="position: fixed; top: 100px; right: 250px;">Luca Vassallo</h1>
+    <!-- Image of Luca -->
+    <img src="luca.png" alt="Luca" style="position: fixed; top: 150px; right: 250px; width: 300px; height: 400px;">
 
     <!-- Back button in the bottom left corner -->
     <button onclick="history.back()" style="position: fixed; bottom: 20px; left: 20px; padding: 10px 20px; font-size: 1rem; color: black; background-color: white; border: none; border-radius: 5px; cursor: pointer;">Back</button>
@@ -72,6 +83,6 @@
             </p>
         </div>
     </div>
-    <button class="back-button" onclick="history.back()">Back</button>
+
 </body>
 </html>
