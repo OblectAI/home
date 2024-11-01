@@ -70,3 +70,19 @@ body {
 .custom-cursor {
     Cursor: url(iconmonstr-shape-20 (1).svg), auto;
 }
+
+<style>
+    
+    .button-container {
+        display: none; 
+        flex-direction: row; /* itemizes the buttons to be side by side*/
+        gap: 10px; /* the gap duh */
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+</style>
